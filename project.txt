@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------*/
+/*  A my own WC - word count utility, for the *NIX operating system and   */
+/*                for the OpenVMS operating system                        */
+Rules:
+
+*NIX style command line is XX -a -b -c files ...
+Will be named as nix style suffix
+
+VMS style command line is XX /A /B /C files ...
+Will be named as vms style suffix
+
+#ifdef VMS || OpenVMS
+   parse_cmd();
+#else
+   parse_cmd();
+#endif
+
+Will be try to check all value of variable to avoid
+possible bugs. For instance:
+ int variable has maximum = 2147483647 and if file size more than
+ 2147483647 bytes - print warning and exit, do not make summarize
+
+For a my own version of wc (word count) I will use:
+unsigned int - for the counters of words, characters and lines,
+so - max file size will be 4294967295 bytes.
+
+Also will be add a few new options:
+- counters of character table;
+- help.
