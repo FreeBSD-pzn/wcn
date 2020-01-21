@@ -42,9 +42,9 @@ $ @makefile
 
 /**************************************************************************/
 To run
-$ wc*n :== "DISK:[DIRECTORY]WCN.EXE"
+$ wc*n :== "$DISK:[DIRECTORY]WCN.EXE"
 and
-$ wcnv :== "DISK:[DIRECTORY]WCNV.EXE"
+$ wcnv :== "$DISK:[DIRECTORY]WCNV.EXE"
 
 To get help
 $ wc -h
